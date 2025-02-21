@@ -1,10 +1,8 @@
-name: Hello Actions
-on:
- push:
- pull_request:
+name: CI Workflow
+on: [push, pull_request]
 jobs:
- hello:
- runs-on: ubuntu-latest
- steps:
- - name: Afficher un message
- run: echo "Hello from GitHub Actions"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a simple script
+        run: echo "GitHub Actions est en cours d'exécution !"
